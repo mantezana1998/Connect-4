@@ -11,10 +11,9 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: small;
-  margin: 0;
-  height: 100vh;
+  height: 105vh;
   display: grid;
-  grid-template-columns: 0.5fr 4fr 0.5fr;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
   grid-template-rows: 0.5fr 6fr 0.5fr ;
   grid-template-areas: 
     'c4 c4 time'
@@ -51,18 +50,19 @@ content {
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  justify-self: center;
+  width: 150vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 1.5fr;
 }
 
 aside {
   grid-area: time;
-  justify-self: center;
 }
 
 #winner {
   grid-area: win;
   justify-self: center;
-  background-color: rgb(50, 115, 205);
 }
 
 footer {
@@ -70,51 +70,75 @@ footer {
 }
 
 #title {
-  background-color: chartreuse;
+  color: white;
+  text-decoration: underline;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
-#connect-4-game {
-  background-color: teal;
-  width: 500px;
+.connect-4-game {
+  background-color: red;
+  width: 120vh;
+  height: 75vh;
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 15px;
   grid-template-columns: repeat (5, 50px);
-  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 70px 70px 70px 70px 70px 70px 70px;
   grid-auto-flow: column;
 }
 
-#main-computer {
-  background-color: violet;
+.slots {
+  background-color: gold;
+  height: 60px;
+  width: 110px;
+  border-radius: 70%;
+  order: 7;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-computer {
+  background-color: blue;
+  color: white;
+  width: 100px;
+  text-align: center;
+  justify-self: center;
 }
 
 #main-me {
   background-color: rgb(19, 16, 243);
+  color: white;
+  width: 100px;
   text-align: center;
+  justify-self: center;
 }
 
 #time {
-  background-color: rgb(253, 154, 16);
+  color: black;
   text-align: center;
 }
 
 #winner {
-  background-color: yellow;
+  color: white;
+  justify-self: center;
+  align-self: center;
 }
 
-#p-score {
+/* #p-score {
   background-color: red
-}
+} */
 
-#c-score {
+/* #c-score {
   background-color: red
-}
+} */
 
 #music {
-  background-color: snow;
+  background-color: black;
+  color: white;
   text-align: center;
 }
