@@ -13,26 +13,33 @@ body {
   font-size: small;
   height: 105vh;
   display: grid;
-  grid-template-columns: 0.5fr 3fr 0.5fr;
-  grid-template-rows: 0.5fr 6fr 0.5fr ;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
   grid-template-areas: 
-    'c4 c4 time'
-    'juego juego win'
-    'music plyrs plyrs';
+    'c4 c4 c4'
+    'juego juego juego'
+    'music music music';
 }
 
-header, content, footer, main, aside {
+header, footer, main{
   /* width: 350px; */
    height: 100px;
   }
 
 header {
+  background-color: rgb(6, 245, 26);
+  text-decoration: underline;
   grid-area: c4;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
   justify-self: center;
+  width: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "sb sb sb"
+  "mm mm mc"
+  "ps ps cs"
+  "ww ww ww";
 }
 
 main {
@@ -44,25 +51,8 @@ main {
   justify-self: center;
 }
 
-content {
-  grid-area: plyrs;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  width: 150vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5fr 1.5fr;
-}
-
-aside {
-  grid-area: time;
-}
-
 #winner {
   grid-area: win;
-  justify-self: center;
 }
 
 footer {
@@ -79,66 +69,77 @@ footer {
 }
 
 .connect-4-game {
-  background-color: red;
-  width: 120vh;
-  height: 75vh;
+  background-color: rgb(0, 42, 92);
+  margin: 10px;
+  width: 160vh;
+  height: 60vh;
+  justify-items: center;
+  align-content: stretch;
   display: grid;
-  grid-gap: 15px;
+  gap: 5px;
   grid-template-columns: repeat (5, 50px);
   grid-template-rows: 70px 70px 70px 70px 70px 70px 70px;
   grid-auto-flow: column;
 }
 
 .slots {
-  background-color: gold;
-  height: 60px;
-  width: 110px;
+  background-color: rgb(122, 193, 66);
+  height: 70px;
+  width: 120px;
   border-radius: 70%;
   order: 7;
   flex-direction: row;
-  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
-#main-computer {
-  background-color: blue;
-  color: white;
-  width: 100px;
-  text-align: center;
+#scoreboard {
+  grid-area: sb;
   justify-self: center;
-}
+}  
+
+#main-computer {
+  background-color: orange;
+  grid-area: mc
+} 
 
 #main-me {
-  background-color: rgb(19, 16, 243);
+  background-color: black;
   color: white;
-  width: 100px;
-  text-align: center;
-  justify-self: center;
-}
+  grid-area: mm;
+} 
 
 #time {
-  color: black;
+  color: white;
+  background-color: red;
   text-align: center;
-}
+  grid-area: time;
+} 
 
 #winner {
   color: white;
-  justify-self: center;
-  align-self: center;
+  background-color: black;
+  grid-area: ww;
+} 
+
+#p-score {
+  background-color: lightgrey;
+  width: 100px;
+  border: 5px solid green;
+  padding: 20px;
+  margin: 5px;
+  grid-area: ps;
+} 
+
+#c-score {
+  background-color: green;
+  grid-area: cs;
 }
-
-/* #p-score {
-  background-color: red
-} */
-
-/* #c-score {
-  background-color: red
-} */
 
 #music {
   background-color: black;
   color: white;
   text-align: center;
+  justify-self: stretch;
 }
