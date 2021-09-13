@@ -22,7 +22,7 @@ let connect4game = [
 }
 
 /*---------------------- cached element references -------------*/
-const gameBoard = document.getElementById('.connect_4_game');
+const gameBoard = document.getElementById('connect4game');
 //console.log(gameBoard)
 
 const footballs = document.querySelectorAll('.slots');
