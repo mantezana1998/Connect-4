@@ -20,26 +20,16 @@ body {
     'juego juego juego';
 }
 
-header, footer, main{
-   height: 200px;
-  }
-
 header {
   background-color: rgb(6, 245, 26);
   color: white;
   text-decoration: underline;
   grid-area: c4;
-  justify-self: center;
-  justify-items: center;
+  place-self: center;
   width: 100vh;
-  /* display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
-  "sb sb sb"
-  "mm mm mc"
-  "ps ps cs"
-  "ww ww ww"; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 main {
@@ -51,15 +41,11 @@ main {
   justify-self: center;
 }
 
-#winner {
-  grid-area: win;
-}
-
 footer {
   grid-area: music
 }
 
-.connect-4-game {
+#connect4game {
   background-color: rgb(170, 0, 0);
   margin: 10px;
   width: 150vh;
@@ -76,60 +62,41 @@ footer {
   background-color: rgb(173, 153, 93);
   height: 65px;
   width: 135px;
-  border-radius: 70%;
-  order: 7;
-  flex-direction: row;
+  border-radius: 80%;
   text-align: center;
-  justify-content: center;
-  align-items: center;
 }
 
 .slots:nth-child(odd) {
   background-color: white;
 }
 
-#scoreboard {
-  grid-area: sb;
-  justify-self: center;
-}  
+#scoreboard {}  
 
 #main-computer {
   background-color: orange;
-  grid-area: mc
 } 
 
 #main-me {
   background-color: black;
   color: white;
-  grid-area: mm;
 } 
 
 #time {
   color: white;
   background-color: red;
   text-align: center;
-  grid-area: time;
 } 
 
 #winner {
   color: white;
   background-color: black;
-  grid-area: ww;
 } 
 
 #p-score {
   background-color: lightgrey;
-  grid-area: ps;
 } 
 
 #c-score {
   background-color: green;
-  grid-area: cs;
 }
 
-/* #music {
-  background-color: black;
-  color: white;
-  text-align: center;
-  justify-self: stretch;
-} */
