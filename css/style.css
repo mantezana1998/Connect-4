@@ -1,5 +1,5 @@
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -11,35 +11,35 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: small;
-  height: 105vh;
+  height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 9fr 1fr;
+  grid-template-rows: 1fr 5fr;
   grid-template-areas: 
-    'c4 c4 c4'
-    'juego juego juego'
-    'music music music';
+    'c4 c4 music'
+    'juego juego juego';
 }
 
 header, footer, main{
-  /* width: 350px; */
-   height: 100px;
+   height: 200px;
   }
 
 header {
   background-color: rgb(6, 245, 26);
+  color: white;
   text-decoration: underline;
   grid-area: c4;
   justify-self: center;
+  justify-items: center;
   width: 100vh;
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: 
   "sb sb sb"
   "mm mm mc"
   "ps ps cs"
-  "ww ww ww";
+  "ww ww ww"; */
 }
 
 main {
@@ -59,39 +59,33 @@ footer {
   grid-area: music
 }
 
-#title {
-  color: white;
-  text-decoration: underline;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
 .connect-4-game {
-  background-color: rgb(0, 42, 92);
+  background-color: rgb(170, 0, 0);
   margin: 10px;
-  width: 160vh;
-  height: 60vh;
-  justify-items: center;
-  align-content: stretch;
+  width: 150vh;
+  height: 70vh;
+  justify-self: end;
   display: grid;
   gap: 5px;
   grid-template-columns: repeat (5, 50px);
-  grid-template-rows: 70px 70px 70px 70px 70px 70px 70px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px;
   grid-auto-flow: column;
 }
 
 .slots {
-  background-color: rgb(122, 193, 66);
-  height: 70px;
-  width: 120px;
+  background-color: rgb(173, 153, 93);
+  height: 65px;
+  width: 135px;
   border-radius: 70%;
   order: 7;
   flex-direction: row;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.slots:nth-child(odd) {
+  background-color: white;
 }
 
 #scoreboard {
@@ -125,10 +119,6 @@ footer {
 
 #p-score {
   background-color: lightgrey;
-  width: 100px;
-  border: 5px solid green;
-  padding: 20px;
-  margin: 5px;
   grid-area: ps;
 } 
 
@@ -137,9 +127,9 @@ footer {
   grid-area: cs;
 }
 
-#music {
+/* #music {
   background-color: black;
   color: white;
   text-align: center;
   justify-self: stretch;
-}
+} */
