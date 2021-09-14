@@ -144,7 +144,6 @@ function playerColor () {
     }
 }
 
-
 //CPU = odds
 //Me player = even
 //boolean to determine turns 
