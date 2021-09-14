@@ -58,7 +58,7 @@ footer {
   grid-auto-flow: column;
 }
 
-.slots {
+.column1, .column2, .column3, .column4, .column5, .column6, .column7 {
   background-color: rgb(173, 153, 93);
   height: 65px;
   width: 135px;
@@ -67,9 +67,10 @@ footer {
   text-align: center;
 }
 
-.slots:nth-child(odd) {
+.column1, .column3, .column5, .column7 {
   background-color: white;
-}
+} /* :nth-child(odd) { */
+
 
 #scoreboard {}  
 

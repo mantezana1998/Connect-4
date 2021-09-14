@@ -56,6 +56,28 @@ const winnerResult = document.querySelector('#winner');
 const pressRestart = document.querySelector('#restart');
 // console.log(pressRestart)
 
+const firstColumn = document.querySelectorAll('.column1');
+// console.log(firstColumn)
+
+const secondColumn = document.querySelectorAll('.column2');
+// console.log(secondColumn)
+
+const thirdColumn = document.querySelectorAll('.column3');
+// console.log(thirdColumn)
+
+const fourthColumn = document.querySelectorAll('.column4');
+// console.log(fourthColumn)
+
+const fifthColumn = document.querySelectorAll(".column5");
+// console.log(fifthColumn)
+
+const sixthColumn = document.querySelectorAll('.column6');
+// console.log(sixthColumn)
+
+const seventhColumn = document.querySelectorAll('.column7');
+// console.log(seventhColumn)
+
+
 
 /*------------------------ event listeners ------------------------*/
 
@@ -73,7 +95,6 @@ if (e.target.tagName === 'DIV'){
  }
 
 })
-
 
 
 
