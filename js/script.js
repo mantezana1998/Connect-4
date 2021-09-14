@@ -3,7 +3,9 @@
 let mainMe;
 let mainComputer;
 let winner;
+let tie
 let checker;
+let turns = 0;
 
 
 /*---------------------- app's state (variables) -----------------*/
@@ -78,24 +80,50 @@ const seventhColumn = document.querySelectorAll('.column7');
 // console.log(seventhColumn)
 
 
-
 /*------------------------ event listeners ------------------------*/
 
 // pressRestart.addEventListener('click', init);
 
 gameBoard.addEventListener('click',function(e){
     // console.log(e.target)
-    console.log(e.target.tagName)
+    // console.log(e.target.tagName)
 
-if (e.target.tagName === 'DIV'){
-    e.target.style.background ='blue';
-    console.log(e.target, "football")
- } else {
-     console.log(e.target, "soccer")
+if (e.target.tagName === 'DIV' && mainMe){
+    e.target.style.backgroundColor ='blue';
+    // console.log(e.target, "football")
+ } else if (e.target.tagName === 'DIV' && !mainMe){
+     e.target.style.backgroundColor ='red';
+    //  console.log(e.target, "soccer")
  }
+ turns++
+ takeTurns () //calling "takeTurns" function
+ console.log(turns, mainMe)
+});
 
-})
+//HOVER CODE NEEDS WORK
+// const col1 = gameBoard.querySelectorAll('.column1');   
+// const events = {
+//     mouseover: e => {
+//         const t = e.target.closest('DIV');
+//         if (t) {
+//             const footballSlots = t.footballSlots;
+//             for (let i = 0, n = col1.length; i < n; i++) {
+//                 col1[i].classList [i === footballSlots ? "add" : "remove"] ("hovered");
+//             }
+//         }
+//     }
+// }
 
+// mouseout: e => {
+//     const t = e.target;
+//     if (t.nodename === 'DIV' && !t.contains(e.relatedTarget)) {
+//         col1[t.footballSlots].classList.remove('hovered');
+//     }
+// }
+
+// for (let event in events) {
+//     gameBoard.addEventListener(event, events[events]);
+// }
 
 
 // pressRestart.addEventListener('click', init);
@@ -105,3 +133,24 @@ if (e.target.tagName === 'DIV'){
 
 
 /*-------------------------- functions ---------------------------*/
+
+function takeTurns () {
+    return mainMe = turns % 2
+} //true if even turns 
+
+function playerColor () {
+    if (mainMe === true){
+    }
+}
+
+//CPU = odds
+//Me player = even
+//boolean to determine turns 
+//define function that checks whose turn it is
+
+//functions needed
+
+//check victory
+//check ties
+//whose turn is it
+//keeping track of score
