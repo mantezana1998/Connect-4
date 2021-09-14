@@ -7,11 +7,7 @@ let tie
 let checker;
 let turns = 0;
 
-
-/*---------------------- app's state (variables) -----------------*/
-
-function init(){
-    let winningArray = [
+let winningArray = [
     [ 0, 1, 2, 3,],[ 0, 8, 16, 24,],[ 0, 7, 14, 21,],[ 1, 2, 3, 4,],
     [ 1, 2, 3, 4,],[ 1, 8, 15, 22,],[ 1, 9, 17, 25,],[ 2, 3, 4, 5,],
     [ 2, 10, 18, 26,],[ 2, 9, 16, 23,],[ 3, 4, 5, 6,],[ 3, 11, 19, 27,],
@@ -33,6 +29,11 @@ function init(){
     [ 24, 30, 36, 42,],[ 13, 19, 25, 31,],[ 19, 25, 31, 37,],[ 25, 31, 37, 43,],
     [ 20, 26, 32, 38,],[ 26, 32, 38, 44,],[ 27, 33, 39, 45,]
     ]
+
+
+/*---------------------- app's state (variables) -----------------*/
+
+function init(){
     
     let connect4game = [
     [null, null, null, null, null, null, null,],
@@ -127,10 +128,7 @@ if (e.target.tagName === 'DIV' && mainMe){
 
 
 
-// pressRestart.addEventListener('click', init);
 
-// document.querySelector('#restart')
-//      addEventListener('click', restartGame);
 
 
 /*-------------------------- functions ---------------------------*/
