@@ -100,30 +100,8 @@ if (e.target.tagName === 'DIV' && mainMe){
  console.log(turns, mainMe)
 });
 
-//HOVER CODE NEEDS WORK
-// const col1 = gameBoard.querySelectorAll('.column1');   
-// const events = {
-//     mouseover: e => {
-//         const t = e.target.closest('DIV');
-//         if (t) {
-//             const footballSlots = t.footballSlots;
-//             for (let i = 0, n = col1.length; i < n; i++) {
-//                 col1[i].classList [i === footballSlots ? "add" : "remove"] ("hovered");
-//             }
-//         }
-//     }
-// }
+//HOVER CODE below
 
-// mouseout: e => {
-//     const t = e.target;
-//     if (t.nodename === 'DIV' && !t.contains(e.relatedTarget)) {
-//         col1[t.footballSlots].classList.remove('hovered');
-//     }
-// }
-
-// for (let event in events) {
-//     gameBoard.addEventListener(event, events[events]);
-// }
 
 
 // pressRestart.addEventListener('click', init);
