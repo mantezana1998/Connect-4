@@ -46,7 +46,9 @@ function init(){
     [null, null, null, null, null, null, null,],
 ]
 
-console.log(connect4game[3][4])
+// console.log(connect4game[3][4])
+
+
 //property of each play taking in for the index of this connect 4 index 
 //use once for for loop to get first level of array --> nested for loop to get access to the array inside of the array //ex) [3][2]
 
@@ -119,12 +121,13 @@ gameBoard.addEventListener('click',function(e){
 
 if (e.target.tagName === 'DIV' && mainMe){
     e.target.style.backgroundColor ='blue';
+    turns++
     // console.log(e.target, "football")
  } else if (e.target.tagName === 'DIV' && !mainMe){
      e.target.style.backgroundColor ='red';
+     turns++
     //  console.log(e.target, "soccer")
  }
- turns++
  takeTurns () //calling "takeTurns" function
  console.log(turns, mainMe)
 });
@@ -166,7 +169,6 @@ function playerColor () {
 //Question: Ask where and when to use render
 
 //who owns the square? --> victory conditions is triggered
-
 
 //define function that checks whose turn it is
 
