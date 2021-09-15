@@ -14,22 +14,25 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 9fr 1fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 3fr;
   grid-template-areas: 
     'c4 c4 music'
     'juego juego juego';
 }
 
 header {
-  background-color: rgb(6, 245, 26);
+  background-color: green;
   color: white;
   text-decoration: underline;
   grid-area: c4;
   place-self: center;
-  width: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 120vh;
+  display: grid;
+  grid-template-areas: 
+  "title title"
+  "plyr1 plyr2"
+  "winner winner"
+  "time restart";
 }
 
 main {
@@ -47,9 +50,9 @@ footer {
 
 #connect4game {
   background-color: rgb(170, 0, 0);
-  margin: 10px;
-  width: 150vh;
-  height: 70vh;
+  margin: 20px;
+  width: 160vh;
+  height: 65vh;
   justify-self: end;
   display: grid;
   gap: 5px;
@@ -75,26 +78,33 @@ footer {
   background-color: pink;
   } */
 
-#scoreboard {}  
+#scoreboard {
+  background-color: black;
+  grid-area: title
+}  
 
 #main-computer {
   background-color: orange;
+  grid-area: plyr2
 } 
 
 #main-me {
   background-color: black;
   color: white;
+  grid-area: plyr1
 } 
 
 #time {
   color: white;
   background-color: red;
   text-align: center;
+  grid-area: time;
 } 
 
 #winner {
   color: white;
   background-color: black;
+  grid-area: winner
 } 
 
 #p-score {
@@ -103,5 +113,9 @@ footer {
 
 #c-score {
   background-color: green;
+}
+
+#restart {
+  grid-area: restart;
 }
 
