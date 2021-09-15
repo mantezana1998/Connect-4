@@ -8,7 +8,7 @@ let checker;
 let turns = 0;
 
 let winningArray = [
-    [ 0, 1, 2, 3,],[ 0, 8, 16, 24,],[ 0, 7, 14, 21,],[ 1, 2, 3, 4,],
+    [ 0, 8, 16, 24,],[ 0, 7, 14, 21,],[ 1, 2, 3, 4,],
     [ 1, 2, 3, 4,],[ 1, 8, 15, 22,],[ 1, 9, 17, 25,],[ 2, 3, 4, 5,],
     [ 2, 10, 18, 26,],[ 2, 9, 16, 23,],[ 3, 4, 5, 6,],[ 3, 11, 19, 27,],
     [ 7, 8, 9, 10,],[ 7, 15, 23, 31,],[ 7, 14, 21, 28,],[ 8, 9, 10, 11,],
@@ -34,7 +34,7 @@ let winningArray = [
 /*---------------------- app's state (variables) -----------------*/
 
 function init(){
-    
+
     let connect4game = [
     [null, null, null, null, null, null, null,],
     [null, null, null, null, null, null, null,],
@@ -44,6 +44,10 @@ function init(){
     [null, null, null, null, null, null, null,],
     [null, null, null, null, null, null, null,],
 ]
+
+console.log(connect4game[3][4])
+//property of each play taking in for the index of this connect 4 index 
+//use once for for loop to get first level of array --> nested for loop to get access to the array inside of the array //ex) [3][2]
 
 let columnOne = [0, 1, 2, 3, 4, 5, 6]
 
@@ -126,11 +130,6 @@ if (e.target.tagName === 'DIV' && mainMe){
 
 //HOVER CODE below
 
-
-
-
-
-
 /*-------------------------- functions ---------------------------*/
 
 function takeTurns () {
@@ -142,12 +141,18 @@ function playerColor () {
     }
 }
 
+function checkForWinner () {
+    
+}
+
+//who owns the square? --> victory conditions is triggered
+
+//
+
 //CPU = odds
 //Me player = even
 //boolean to determine turns 
 //define function that checks whose turn it is
-
-//functions needed
 
 //check victory
 //check ties
