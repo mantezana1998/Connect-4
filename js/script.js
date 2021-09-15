@@ -145,6 +145,8 @@ function checkForWinner () {
     
 }
 
+//Question: Ask where and when to use render
+
 //who owns the square? --> victory conditions is triggered
 
 //
