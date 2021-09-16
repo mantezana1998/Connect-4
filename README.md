@@ -1,7 +1,7 @@
-#Connect 4! By: Maximo Antezana
+#Connect 4! By: Maximo Antezana#
 
-2) ![Connect 4](https://i.imgur.com/LV4XXxE.png)
-    ! [Winner!](https://i.imgur.com/NSUCDcP.png)
+![Connect 4](https://i.imgur.com/LV4XXxE.png)
+![Winner!](https://i.imgur.com/NSUCDcP.png)
 
 I used HTML, CSS, and JavaScript to create this game.
 
