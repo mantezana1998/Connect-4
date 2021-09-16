@@ -51,6 +51,10 @@ header {
   justify-self: center;
 }
 
+h3 {
+  text-align: center;
+}
+
 main {
   grid-area: juego;
   grid-column-start: 2;
@@ -113,21 +117,3 @@ main {
   grid-area: plyr1;
   justify-self: center;
 } 
-
-#result {
-  color: white;
-  grid-area: winner;
-  justify-self: center;
-} 
-
-#p-score {
-  background-color: lightgrey;
-  grid-area: myscore;
-  justify-self: center;
-} 
-
-#c-score {
-  background-color: lightblue;
-  grid-area: cpuscore;
-  justify-self: center;
-}
