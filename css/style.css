@@ -31,7 +31,7 @@ header {
   "title title"
   "plyr1 plyr2"
   "myscore cpuscore"
-  "restart restart"
+  "winner winner"
   "winner winner";
 }
 
@@ -44,35 +44,33 @@ main {
   justify-self: center;
 }
 
-footer {
-  grid-area: tiempo
-}
-
 main {
   background-color: rgb(117,0,0);
   margin: 40px;
   width: 160vh;
-  height: 63vh;
+  height: 65vh;
   justify-self: end;
   display: grid;
   gap: 5px;
   grid-template-columns: repeat (7, 50px);
-  grid-template-rows: 80px 80px 80px 80px 80px 80px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
   grid-auto-flow: column;
 }
 
-.column1, .column2, .column3, .column4, .column5, .column6 {
-  background-color: rgb(173, 153, 93);
-  height: 65px;
-  width: 145px;
+.column1, .column2, .column3, .column4, .column5, .column6, .column7 {
+  height: 75px;
+  width: 155px;
   margin: auto;
   border-radius: 80%;
   text-align: center;
 }
 
-.column1, .column3, .column5 {
+.column1, .column3, .column5, .column7 {
   background-color: white;
-/* } :nth-child(odd) {  */
+}
+
+.column2, .column4, .column6 {
+  background-color: rgb(173, 153, 93);
 }
 
 #scoreboard {
@@ -95,7 +93,7 @@ main {
   justify-self: center;
 } 
 
-#winner {
+#result {
   color: white;
   grid-area: winner;
   justify-self: center;
@@ -112,8 +110,3 @@ main {
   grid-area: cpuscore;
   justify-self: center;
 }
-
-#restart {
-  grid-area: restart;
-}
-

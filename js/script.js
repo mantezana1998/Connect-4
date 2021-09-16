@@ -2,10 +2,7 @@
 
 let mainMe;
 let mainComputer;
-let winner;
 let tie;
-let scores;
-let checker;
 let result;
 let turns = 0;
 
@@ -44,67 +41,19 @@ let connectFourGameBoard = [
 [null, null, null, null, null, null, null]
 ]
 
-console.log(connectFourGameBoard)
-
-
-//property of each play taking in for the index of this connect 4 index 
-//use once for for loop to get first level of array --> nested for loop to get access to the array inside of the array //ex) [3][2]
-
-// let columnOne = [0, 1, 2, 3, 4, 5, 6]
-
-// let columnTwo = [7, 8, 9, 10, 11, 12, 13,]
-
-// let columnThree = [14, 15, 16, 17, 18, 19, 20]
-
-// let columnFour = [21, 22, 23, 24, 25, 26, 27]
-
-// let columnFive = [28, 29, 30, 31, 32, 33, 34]
-
-// let columnSix = [35, 36, 37, 38, 39, 40, 41]
-
-// let columnSeven = [42, 43, 44, 45, 46, 47, 48]
-
-
-
-
-/*---------------------- cached element references -------------*/
+/*---------------------- cached element references -----------------------*/
 const gameBoard = document.getElementById('connectfourgame');
-//console.log(gameBoard)
 
 const footballs = document.querySelectorAll('.slots');
-//console.log(footballs)
 
 const finalScores = {
     mainMe: document.querySelector('#p-score'),
-    mainComputer: document.querySelector('#c-score')    // tie: document.querySelector()
+    mainComputer: document.querySelector('#c-score')    
 }
 
 const results = document.querySelector('#result')
 
-// const firstColumn = document.querySelectorAll('.column1');
-// // console.log(firstColumn)
-
-// const secondColumn = document.querySelectorAll('.column2');
-// // console.log(secondColumn)
-
-// const thirdColumn = document.querySelectorAll('.column3');
-// // console.log(thirdColumn)
-
-// const fourthColumn = document.querySelectorAll('.column4');
-// // console.log(fourthColumn)
-
-// const fifthColumn = document.querySelectorAll(".column5");
-// // console.log(fifthColumn)
-
-// const sixthColumn = document.querySelectorAll('.column6');
-// // console.log(sixthColumn)
-
-// const seventhColumn = document.querySelectorAll('.column7');
-// // console.log(seventhColumn)
-
-/*------------------------ event listeners ------------------------*/
-
-// pressRestart.addEventListener('click', init);
+/*------------------------ event listeners -------------------------------*/
 
 gameBoard.addEventListener('click',function(e){
     checkerMove(e)
@@ -125,10 +74,10 @@ function render (){
 
 function takeTurns () {
     return mainMe = turns % 2
-} //true if even turns 
+} 
 
 function playerColor () {
-    if (mainMe === true){
+    if (mainMe === true){  
     }
 }
 
@@ -155,53 +104,16 @@ function checkerMove(e){
     let x = idx % 6
     
     if (e.target.tagName === 'DIV' && mainMe){
-        // console.log(e.target.tagName)
         e.target.style.backgroundColor ='blue';
         connectFourGameBoard[x][y] = 'blue'
         turns++
-        // console.log(e.target, "football")
  }  else if (e.target.tagName === 'DIV' && !mainMe){
         e.target.style.backgroundColor ='red';
         connectFourGameBoard[x][y] = 'red'
         turns++
-        //  console.log(e.target, "soccer")
  }  
 
  whoWon()
  takeTurns()
  render()
-//  takeTurns () //calling "takeTurns" function
-//  console.log(turns, mainMe)
 }
-
-// function init () {
-//     scores = {
-//         mainMe: 0,
-//         mainComputer: 0,
-//         tie: 0
-//     }
-
-//     winner = null;
-
-//     render ()
-
-// }
-
-// function render (){
-//     for (let score in scores){
-//         finalScores[score].textContent = scores[score];
-//         // console.log(scores[score]);
-//     }
-
-// }
-
-//Question: Ask where and when to use render
-
-//who owns the square? --> victory conditions is triggered
-
-//define function that checks whose turn it is
-
-//check victory
-//check ties
-//whose turn is it
-//keeping track of score
