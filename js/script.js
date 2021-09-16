@@ -44,7 +44,7 @@ let connectFourGameBoard = [
 [null, null, null, null, null, null, null]
 ]
 
-// console.log(connect4game[3][4])
+console.log(connectFourGameBoard)
 
 
 //property of each play taking in for the index of this connect 4 index 
@@ -79,13 +79,7 @@ const finalScores = {
     mainComputer: document.querySelector('#c-score')    // tie: document.querySelector()
 }
 
-//console.log(finalScores)
-
-const winnerResult = document.querySelector('#winner');
-// console.log(winnerResult)
-
-const pressRestart = document.querySelector('#restart');
-// console.log(pressRestart)
+const results = document.querySelector('#result')
 
 // const firstColumn = document.querySelectorAll('.column1');
 // // console.log(firstColumn)
@@ -148,7 +142,7 @@ function whoWon(){
                 let d = document.getElementById(`${winningArray[i][j + 3]}`).style.backgroundColor
 
                 if (a == b && b == c && c == d){
-                    result.innerHTML = 'Player wins'
+                    results.innerHTML = 'Player wins'
                 }
             }
         }
@@ -173,7 +167,7 @@ function checkerMove(e){
         //  console.log(e.target, "soccer")
  }  
 
-whoWon()
+ whoWon()
  takeTurns()
  render()
 //  takeTurns () //calling "takeTurns" function
