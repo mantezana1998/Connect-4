@@ -1,11 +1,11 @@
 # Connect 4! By: Maximo Antezana
 
-![Connect 4](https://i.imgur.com/LV4XXxE.png)
-![Winner!](https://i.imgur.com/NSUCDcP.png)
+![Connect 4](http://i.imgur.com/LV4XXxE.png)
+![Winner!](http://i.imgur.com/NSUCDcP.png)
 
 I used HTML, CSS, and JavaScript to create this game.
 
-Want to play? Click [**here**!](https://mantezana1998.github.io/connectfour/)
+Want to play? Click [**here**!](http://mantezana1998.github.io/connectfour/)
 
 Planned future enhancements:
 * Hover over a column and drop checker to the bottom 
