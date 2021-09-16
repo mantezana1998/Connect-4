@@ -6,44 +6,42 @@ let winner;
 let tie;
 let scores;
 let checker;
+let result;
 let turns = 0;
 
 let winningArray = [
-    [ 0, 8, 16, 24,],[ 0, 7, 14, 21,],[ 1, 2, 3, 4,],
-    [ 1, 2, 3, 4,],[ 1, 8, 15, 22,],[ 1, 9, 17, 25,],[ 2, 3, 4, 5,],
-    [ 2, 10, 18, 26,],[ 2, 9, 16, 23,],[ 3, 4, 5, 6,],[ 3, 11, 19, 27,],
-    [ 7, 8, 9, 10,],[ 7, 15, 23, 31,],[ 7, 14, 21, 28,],[ 8, 9, 10, 11,],
-    [ 8, 16, 24, 32,],[ 8, 15, 22, 29,],[ 9, 10, 11, 12,],[ 9, 17, 25, 33,],
-    [ 9, 16, 23, 30,],[ 10, 11, 12, 13,],[ 10, 18, 26, 34,],[ 10, 17, 24, 31,],
-    [ 14, 15, 16, 17,],[ 14, 22, 30, 38,],[ 14, 21, 28, 35,],[ 15, 16, 17, 18,],
-    [ 15, 23, 31, 39,],[ 15, 22, 29, 36,],[ 16, 17, 18, 19,],[ 16, 24, 32, 40,],
-    [ 16, 23, 30, 37,],[ 17, 18, 19, 20,],[ 17, 25, 33, 41,],[ 17, 24, 31, 38,],
-    [ 21, 22, 23, 24,],[ 21, 29, 37, 45,],[ 21, 28, 35, 42,],[ 22, 23, 24, 25,],
-    [ 22, 30, 38, 46,],[ 22, 29, 36, 43,],[ 23, 24, 25, 26,],[ 23, 31, 39, 47,],
-    [ 24, 25, 26, 27,],[ 24, 32, 40, 48,],[ 24, 31, 38, 45,],[ 28, 29, 30, 31,],
-    [ 28, 29, 30, 31,],[ 35, 36, 37, 38,],[ 42, 43, 44, 45,],[ 4, 11, 18, 25,],
-    [ 5, 12, 19, 26,],[ 6, 13, 20, 27,],[ 11, 18, 25, 32,],[ 18, 25, 32, 39,],
-    [ 25, 32, 39, 46,],[ 12, 19, 26, 33,],[ 19, 26, 33, 40,],[ 26, 33, 40, 47,],
-    [ 13, 20, 27, 34,],[ 20, 27, 34, 41,],[ 27, 34, 41, 48,],[ 3, 9, 15, 21,],
-    [ 4, 10, 16, 22,],[ 10, 16, 22, 28,],[ 5, 11, 17, 23,],[ 11, 17, 23, 29,],
-    [ 17, 23, 29, 35,],[ 6, 12, 18, 24,],[ 12, 18, 24, 30,],[ 18, 24, 30, 36,],
-    [ 24, 30, 36, 42,],[ 13, 19, 25, 31,],[ 19, 25, 31, 37,],[ 25, 31, 37, 43,],
-    [ 20, 26, 32, 38,],[ 26, 32, 38, 44,],[ 27, 33, 39, 45,]
+    [ 0, 1, 2, 3],[ 0, 7, 14, 21],[ 0, 6, 12, 18],[ 1, 2, 3, 4],
+    [ 1, 8, 15, 22],[ 1, 7, 13, 19],[ 2, 3, 4, 5],[ 2, 9, 16, 23],
+    [ 2, 8, 14, 20],[ 6, 7, 8, 9],[ 6, 13, 20, 27],[ 6, 12, 18, 24],
+    [ 7, 8, 9, 10],[ 7, 14, 21, 28],[ 7, 13, 19, 25],[ 8, 9, 10, 11],
+    [ 8, 15, 22, 29],[ 8, 14, 20, 26],[ 12, 13, 14, 15],[ 12, 19, 26, 33],
+    [ 12, 18, 24, 30],[ 13, 14, 15, 16],[ 13, 20, 27, 34],[ 13, 19, 25, 31],
+    [ 14, 15, 16, 17],[ 14, 21, 28, 35],[ 14, 20, 26, 32],[ 18, 19, 20, 21],
+    [ 18, 25, 32, 39],[ 18, 24, 30, 36],[ 19, 20, 21, 22],[ 19, 26, 33, 40],
+    [ 19, 25, 31, 37],[ 20, 21, 22, 23],[ 20, 27, 34, 41],[ 20, 26, 32, 38],
+    [ 24, 25, 26, 27],[ 30, 31, 32, 33],[ 36, 37, 38, 39],[ 3, 8, 13, 18],
+    [ 4, 9, 14, 19],[ 9, 14, 19, 24],[ 5, 10, 15, 20],[ 10, 15, 20, 25],
+    [ 15, 20, 25, 30],[ 11, 16, 21, 26],[ 16, 21, 26, 31],[ 21, 26, 31, 36],
+    [ 17, 22, 27, 32],[ 22, 27, 32, 37],[ 23, 28, 33, 38],[ 18, 25, 32, 39],
+    [ 12, 19, 26, 33],[ 19, 26, 33, 40],[ 6, 13, 20, 27],[ 13, 20, 27, 34],
+    [ 20, 27, 34, 41],[ 0, 7, 14, 21],[ 7, 14, 21, 28],[ 14, 21, 28, 35],
+    [ 1, 8, 15, 22],[ 8, 15, 22, 29],[ 2, 9, 16, 23],[ 4, 10, 16, 22],
+    [ 10, 16, 22, 28],[ 16, 22, 28, 34],[ 22, 28, 34, 40],[ 5, 11, 17, 23],
+    [ 11, 17, 23, 29],[ 17, 23, 29, 35],[ 23, 29, 35, 41]
     ]
 
 
 /*---------------------- app's state (variables) -----------------*/
 
-function init(){
+function init(){}
 
-    let connect4game = [
-    [null, null, null, null, null, null, null,],
-    [null, null, null, null, null, null, null,],
-    [null, null, null, null, null, null, null,],
-    [null, null, null, null, null, null, null,],
-    [null, null, null, null, null, null, null,],
-    [null, null, null, null, null, null, null,],
-    [null, null, null, null, null, null, null,],
+let connectFourGameBoard = [
+[null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null]
 ]
 
 // console.log(connect4game[3][4])
@@ -66,12 +64,11 @@ function init(){
 
 // let columnSeven = [42, 43, 44, 45, 46, 47, 48]
 
-}
 
 
 
 /*---------------------- cached element references -------------*/
-const gameBoard = document.getElementById('connect4game');
+const gameBoard = document.getElementById('connectfourgame');
 //console.log(gameBoard)
 
 const footballs = document.querySelectorAll('.slots');
@@ -116,25 +113,21 @@ const pressRestart = document.querySelector('#restart');
 // pressRestart.addEventListener('click', init);
 
 gameBoard.addEventListener('click',function(e){
+    checkerMove(e)
     // console.log(e.target)
     // console.log(e.target.tagName)
-
-if (e.target.tagName === 'DIV' && mainMe){
-    e.target.style.backgroundColor ='blue';
-    turns++
-    // console.log(e.target, "football")
- } else if (e.target.tagName === 'DIV' && !mainMe){
-     e.target.style.backgroundColor ='red';
-     turns++
-    //  console.log(e.target, "soccer")
- }
- takeTurns () //calling "takeTurns" function
- console.log(turns, mainMe)
 });
 
-//HOVER CODE below
 
 /*-------------------------- functions ---------------------------*/
+
+function initGame(){
+    render ()
+}
+
+function render (){
+    console.log(gameBoard)
+}
 
 function takeTurns () {
     return mainMe = turns % 2
@@ -143,6 +136,48 @@ function takeTurns () {
 function playerColor () {
     if (mainMe === true){
     }
+}
+
+function whoWon(){
+    for (let i = 0; i < winningArray.length; i++){
+        for (let j = 0; j < 1; j++){
+            if (document.getElementById(`${winningArray[i][j]}`).style.backgroundColor != ''){
+                let a = document.getElementById(`${winningArray[i][j]}`).style.backgroundColor
+                let b = document.getElementById(`${winningArray[i][j + 1]}`).style.backgroundColor
+                let c = document.getElementById(`${winningArray[i][j + 2]}`).style.backgroundColor
+                let d = document.getElementById(`${winningArray[i][j + 3]}`).style.backgroundColor
+
+                if (a == b && b == c && c == d){
+                    result.innerHTML = 'Player wins'
+                }
+            }
+        }
+    }
+}
+
+function checkerMove(e){
+    let idx = e.target.id
+    let y = Math.floor(idx / 6)
+    let x = idx % 6
+    
+    if (e.target.tagName === 'DIV' && mainMe){
+        // console.log(e.target.tagName)
+        e.target.style.backgroundColor ='blue';
+        connectFourGameBoard[x][y] = 'blue'
+        turns++
+        // console.log(e.target, "football")
+ }  else if (e.target.tagName === 'DIV' && !mainMe){
+        e.target.style.backgroundColor ='red';
+        connectFourGameBoard[x][y] = 'red'
+        turns++
+        //  console.log(e.target, "soccer")
+ }  
+
+whoWon()
+ takeTurns()
+ render()
+//  takeTurns () //calling "takeTurns" function
+//  console.log(turns, mainMe)
 }
 
 // function init () {

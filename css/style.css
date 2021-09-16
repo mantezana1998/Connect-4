@@ -16,13 +16,13 @@ body {
   grid-template-columns: 1fr 9fr 1fr;
   grid-template-rows: 1fr 3fr;
   grid-template-areas: 
-    'side c4 music'
-    'tiempo juego juego';
+    'c4 c4 c4'
+    'juego juego juego';
 }
 
 header {
-  background-color: rgb(32, 112, 32);
-  color: white;
+  background-color: black;
+  color: red;
   grid-area: c4;
   place-self: center;
   width: 120vh;
@@ -31,7 +31,7 @@ header {
   "title title"
   "plyr1 plyr2"
   "myscore cpuscore"
-  "time restart"
+  "restart restart"
   "winner winner";
 }
 
@@ -48,20 +48,16 @@ footer {
   grid-area: tiempo
 }
 
-side {
-  grid-area: side;
-}
-
-#connect4game {
-  background-color: rgb(170, 0, 0);
+main {
+  background-color: rgb(117,0,0);
   margin: 40px;
   width: 160vh;
   height: 63vh;
   justify-self: end;
   display: grid;
   gap: 5px;
-  grid-template-columns: repeat (5, 50px);
-  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-columns: repeat (7, 50px);
+  grid-template-rows: 80px 80px 80px 80px 80px 80px;
   grid-auto-flow: column;
 }
 
@@ -87,30 +83,20 @@ side {
 }  
 
 #main-computer {
-  background-color: orange;
   text-decoration: underline;
   grid-area: plyr2;
   justify-self: center;
 } 
 
 #main-me {
-  background-color: black;
   text-decoration: underline;
-  color: white;
+  color: red;
   grid-area: plyr1;
   justify-self: center;
 } 
 
-#time {
-  color: white;
-  background-color: red;
-  text-align: center;
-  grid-area: time;
-} 
-
 #winner {
   color: white;
-  background-color: black;
   grid-area: winner;
   justify-self: center;
 } 
