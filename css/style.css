@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url('https://i.imgur.com/c2BrE6m.jpg');
+  background-image: url('http://i.imgur.com/c2BrE6m.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: small;
@@ -22,7 +22,7 @@ body {
 
 header {
   background-color: black;
-  color: red;
+  color: rgba(255, 0, 0, 0.5);
   grid-area: c4;
   place-self: center;
   width: 120vh;
@@ -32,7 +32,23 @@ header {
   "plyr1 plyr2"
   "myscore cpuscore"
   "winner winner"
-  "winner winner";
+  "lefty righty";
+}
+
+#pic-right-side {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  grid-area: righty;
+  justify-self: center;
+}
+
+#pic-left-side {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  grid-area: lefty;
+  justify-self: center;
 }
 
 main {
@@ -45,7 +61,7 @@ main {
 }
 
 main {
-  background-color: rgb(117,0,0);
+  background-color: rgba(202, 9, 9, 0.767);
   margin: 40px;
   width: 160vh;
   height: 65vh;
@@ -71,6 +87,11 @@ main {
 
 .column2, .column4, .column6 {
   background-color: rgb(173, 153, 93);
+}
+
+#connectfourgame > div:hover{
+  opacity: 0.7;
+  background-color: rgb(133, 53, 0);
 }
 
 #scoreboard {

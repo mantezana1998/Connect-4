@@ -91,7 +91,7 @@ function whoWon(){
                 let d = document.getElementById(`${winningArray[i][j + 3]}`).style.backgroundColor
 
                 if (a == b && b == c && c == d){
-                    results.innerHTML = 'Player wins'
+                    results.innerHTML = 'Winner!'
                 }
             }
         }

@@ -1,10 +1,11 @@
-Connect 4! By: Maximo Antezana
+#Connect 4! By: Maximo Antezana
 
-<!-- 2) Screenshot of the actual game -->
+2) ![Connect 4](https://i.imgur.com/LV4XXxE.png)
+    ! [Winner!](https://i.imgur.com/NSUCDcP.png)
 
 I used HTML, CSS, and JavaScript to create this game.
 
-Copy and paste the link into your browser to play!: file:///Users/MaximoAntezana/code/Project-1-Max-Antezana-connect-4/index.html
+Want to play? Click [here](https://mantezana1998.github.io/connectfour/)
 
 Planned future enhancements:
     - Hover a column and drop checker to the bottom
