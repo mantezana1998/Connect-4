@@ -28,8 +28,6 @@ let winningArray = [
 
 /*---------------------- app's state (variables) -----------------*/
 
-function init(){}
-
 let connectFourGameBoard = [
 [null, null, null, null, null, null, null],
 [null, null, null, null, null, null, null],
