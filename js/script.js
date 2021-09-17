@@ -22,14 +22,13 @@ let winningArray = [
     [ 20, 27, 34, 41],[ 0, 7, 14, 21],[ 7, 14, 21, 28],[ 14, 21, 28, 35],
     [ 1, 8, 15, 22],[ 8, 15, 22, 29],[ 2, 9, 16, 23],[ 4, 10, 16, 22],
     [ 10, 16, 22, 28],[ 16, 22, 28, 34],[ 22, 28, 34, 40],[ 5, 11, 17, 23],
-    [ 11, 17, 23, 29],[ 17, 23, 29, 35],[ 23, 29, 35, 41], [25, 26, 27, 28] 
-    [15,16,17,18]
+    [ 11, 17, 23, 29],[ 17, 23, 29, 35],[ 23, 29, 35, 41]
     ]
 
 
 /*---------------------- app's state (variables) -----------------*/
 
-// function init(){}
+function init(){}
 
 let connectFourGameBoard = [
 [null, null, null, null, null, null, null],
@@ -44,11 +43,13 @@ let connectFourGameBoard = [
 
 const gameBoard = document.getElementById('connectfourgame');
 
+
 /*------------------------ event listeners -------------------------------*/
 
 gameBoard.addEventListener('click',function(e){
     checkerMove(e)
 });
+
 
 /*-------------------------- functions ---------------------------*/
 
@@ -57,7 +58,6 @@ function initGame(){
 }
 
 function render (){
-    console.log(gameBoard)
 }
 
 function takeTurns () {
@@ -79,7 +79,7 @@ function whoWon(){
                 let d = document.getElementById(`${winningArray[i][j + 3]}`).style.backgroundColor
 
                 if (a == b && b == c && c == d){
-                    result.innerHTML = `${turns % 2 ? 'red' : 'blue'} wins`
+                    result.innerHTML = 'You win!'
                 }
             }
         }
@@ -93,11 +93,11 @@ function checkerMove(e){
     
     if (e.target.tagName === 'DIV' && mainMe){
         e.target.style.backgroundColor ='blue';
-        connectFourGameBoard[x][y] ='blue'
+        connectFourGameBoard[x][y] = 'blue'
         turns++
  }  else if (e.target.tagName === 'DIV' && !mainMe){
         e.target.style.backgroundColor ='red';
-        connectFourGameBoard[x][y] ='red'
+        connectFourGameBoard[x][y] = 'red'
         turns++
  }  
 
