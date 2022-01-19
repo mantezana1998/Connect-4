@@ -5,7 +5,7 @@
 
 I used HTML, CSS, and JavaScript to create this game
 
-Want to play? Click [**here**!](https://mantezana1998.github.io/connectfour/)
+Want to play? Click [**here**!](https://mantezana1998.github.io/Connect-4/)
 
 Planned future enhancements:
 * Hover over a column and drop checker to the bottom 
