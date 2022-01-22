@@ -19,23 +19,23 @@
  <h1>Screenshots</h1>
 <details>
 <summary> :bar_chart: ERD</summary>
-<!-- | Description | Screenshot |
-|------------ | ------------| -->
+| Description | Screenshot |
+|------------ | ------------|
 | <h3 align="center">ERD</h3> | <img src="https://``github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ERD.MYC.png" width="700"> |
 </details>
 
 <details>
 <summary> :art: Wireframes</summary>
-<!-- | Description | Screenshot |
-|------------ | ------------| -->
+| Description | Screenshot |
+|------------ | ------------|
 | <h3 align="center">Home Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/Homepage.Wireframe.MYC.png" width="700"/>
 | <h3 align="center">Profile Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.Wireframe.MYC.png" width="700"> |
 </details>
 
 <details open>
 <summary> :gear: Functionality</summary>
-<!-- | Description | Screenshot |
-|------------ | ------------| -->
+| Description | Screenshot |
+|------------ | ------------|
 | <h3 align="center">Gameboard</h3> | <img src="https://i.imgur.com/LV4XXxE.png" width="700"/> |
 | <h3 align="center">Winner!</h3> | <img src="https://i.imgur.com/NSUCDcP.png" width="700"/> |
 </details>
@@ -49,3 +49,15 @@
 ![Git](https://img.shields.io/badge/-Git-333?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
+
+## :fast_forward: Next Steps   
+
+### Upcoming Features
+
+- [ ] Hover over a column and drop checker to the bottom   
+
+- [ ] Football Scoreboard with timer, home & away option, and sirens   
+
+- [ ] Confetti and audience cheer when a player wins
+
+- [ ] Football logo on each checker
