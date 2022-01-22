@@ -11,7 +11,8 @@
    <a href="mailto:maximo00antezana@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-user@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
-
+</div>
+   
 <h1>:pencil: Description</h1>
 <p>Connect 4 is a classic 2 player game in which players alternately places pieces on a 7 x 6 board. The winner must get a line of four to win the game!</p>
 
