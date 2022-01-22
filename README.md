@@ -15,6 +15,7 @@
 <h1>:pencil: Description</h1>
 <p>Connect 4 is a classic 2 player game in which players alternately places pieces on a 7 x 6 board. The winner must get a line of four to win the game!</p>
 
+ <h1>Screenshots</h1>
 <details>
 <summary> :bar_chart: ERD</summary>
 <!-- | Description | Screenshot |
@@ -23,7 +24,6 @@
 </details>
 
 <details>
-   <h1>Screenshots</h1>
 <summary> :art: Wireframes</summary>
 <!-- | Description | Screenshot |
 |------------ | ------------| -->
