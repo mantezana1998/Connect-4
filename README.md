@@ -19,9 +19,8 @@
 <h1>Screenshots</h1>
 <details open>
 <summary> :gear: Functionality</summary>
-| Description | Screenshot |
-| <h3 align="center">Gameboard</h3> | <img src="https://i.imgur.com/LV4XXxE.png" width="700"/> |
-| <h3 align="center">Winner!</h3> | <img src="https://i.imgur.com/NSUCDcP.png" width="700"/> |
+<h3 align="center">Gameboard</h3><img src="https://i.imgur.com/LV4XXxE.png" width="700"/> 
+<h3 align="center">Winner!</h3><img src="https://i.imgur.com/NSUCDcP.png" width="700"/> 
 </details>
 
 ## :computer: Technologies Used
