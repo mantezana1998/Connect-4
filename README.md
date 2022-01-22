@@ -23,6 +23,7 @@
 </details>
 
 <details>
+   <h1>Screenshots</h1>
 <summary> :art: Wireframes</summary>
 <!-- | Description | Screenshot |
 |------------ | ------------| -->
