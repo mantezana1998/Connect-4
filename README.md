@@ -38,3 +38,13 @@
 | <h3 align="center">Gameboard</h3> | <img src="https://i.imgur.com/LV4XXxE.png" width="700"/> |
 | <h3 align="center">Winner!</h3> | <img src="https://i.imgur.com/NSUCDcP.png" width="700"/> |
 </details>
+
+## :computer: Technologies Used
+
+![JavaScript](https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript) 
+![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5)
+![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
+![Markdown](https://img.shields.io/badge/-Markdown-333?style=flat&logo=markdown)
+![Git](https://img.shields.io/badge/-Git-333?style=flat&logo=git)
+![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
+![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
