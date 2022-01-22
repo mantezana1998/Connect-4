@@ -16,20 +16,7 @@
 <h1>:pencil: Description</h1>
 <p>Connect 4 is a classic 2 player game in which players alternately places pieces on a 7 x 6 board. The winner must get a line of four to win the game!</p>
 
- <h1>Screenshots</h1>
-<details>
-<summary> :bar_chart: ERD</summary>
-| Description | Screenshot |
-| <h3 align="center">ERD</h3> | <img src="https://``github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ERD.MYC.png" width="700"> |
-</details>
-
-<details>
-<summary> :art: Wireframes</summary>
-| Description | Screenshot |
-| <h3 align="center">Home Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/Homepage.Wireframe.MYC.png" width="700"/>
-| <h3 align="center">Profile Page</h3> | <img src="https://github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ProfilePage.Wireframe.MYC.png" width="700"> |
-</details>
-
+<h1>Screenshots</h1>
 <details open>
 <summary> :gear: Functionality</summary>
 | Description | Screenshot |
