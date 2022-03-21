@@ -25,7 +25,7 @@ background-color: black;
 color: rgba(255, 0, 0, 0.5);
 grid-area: c4;
 place-self: center;
-width: 120vh;
+width: 100vh;
 display: grid;
 grid-template-areas: 
 "title title"
@@ -67,19 +67,19 @@ justify-self: center;
 main {
 background-color: rgba(202, 9, 9, 0.767);
 margin: 40px;
-width: 160vh;
-height: 65vh;
+width: 90%;
+height: 85%;
 justify-self: end;
 display: grid;
 gap: 5px;
 grid-template-columns: repeat (7, 50px);
-grid-template-rows: 100px 100px 100px 100px 100px 100px;
+grid-template-rows: 80px 80px 80px 80px 80px 80px;
 grid-auto-flow: column;
 }
 
 .column1, .column2, .column3, .column4, .column5, .column6, .column7 {
-height: 75px;
-width: 155px;
+height: 50px;
+width: 100px;
 margin: auto;
 border-radius: 80%;
 text-align: center;
